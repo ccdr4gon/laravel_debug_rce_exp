@@ -11,12 +11,13 @@
 
 ![Snipaste_2021-04-10_09-40-45](./Snipaste_2021-04-10_09-40-45.jpg)
 
-
-
 ![Snipaste_2021-04-10_09-43-48](./Snipaste_2021-04-10_09-43-48.jpg)
-
-
 
 # Vulnerability analysis
 
 https://ccdragon.cc/?p=2829
+
+# Advantage
+
+- 使用poc进行探测是否修复
+- 新的编码方式,增加成功率
