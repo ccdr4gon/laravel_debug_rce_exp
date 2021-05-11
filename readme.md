@@ -1,6 +1,7 @@
 # CVE-2021-3129
 
 影响范围  Laravel <= 8.4.2. Ignition <2.5.2
+仅供测试与研究使用
 
 # Environment
 
@@ -20,4 +21,4 @@ https://ccdragon.cc/?p=2829
 # Advantage
 
 - 使用poc进行探测是否修复
-- 新的编码方式,增加成功率
+- 优化了一小部分编码方式
